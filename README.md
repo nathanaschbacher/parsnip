@@ -11,7 +11,7 @@ Parsnip uses the same native C parser that node.js's HTTP module does.
 ## Usage
 ####Parsnip.parse( *raw_http_data, [http_code]* )
 
-Given the following raw_http_data:
+Given the following raw_http_data (as String of Buffer):
 
 ```
 HTTP/1.1 200 OK

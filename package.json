@@ -1,6 +1,6 @@
 {
     "name": "parsnip",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Digging up node.js's C HTTP parser for you to chew on.",
     "author": "Nathan Aschbacher <nathan.aschbacher@gmail.com>",
     "contributors": [ 

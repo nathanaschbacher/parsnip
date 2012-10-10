@@ -29,6 +29,8 @@ function parse(faux_http, code) {
     var parser = new HTTPParser(HTTPParser.RESPONSE);
     var faux_response;
 
+    faux_http = Buffer.isBuffer(faux_http) ? faux_http : new Buffer(faux_http);
+
     if(code !== undefined) {
         var h_buff = new Buffer("HTTP/1.1 "+code+" "+STATUS_CODES[code]+"\r\n");
         faux_http = Buffer.concat([h_buff, faux_http], h_buff.length + faux_http.length)
