@@ -71,3 +71,4 @@ function processHeaders(header_array) {
 }
 
 exports.parse = parse;
+exports.chop = exports.parse;

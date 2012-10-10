@@ -50,4 +50,20 @@ describe("Parsnip HTTP Parsing Test Suite", function() {
 
         done();
     });
+
+    it("should work using the '.chop()' alias too", function(done) {
+        var result = parsnip.chop(test_file_contents, 200);
+
+        result.should.not.be.an.instanceOf(Error);
+        result.should.have.property('headers');
+        result.should.have.property('body');
+
+        var obj = JSON.parse(result.body);
+        obj.should.have.property('hey', 5);
+
+        result.headers.should.have.property('content-type', 'text/plain');
+        result.headers.should.have.property('content-length', '9');
+
+        done();
+    });
 });

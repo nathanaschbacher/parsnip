@@ -55,7 +55,13 @@ console.log(all_parsed);
 }
 >```
 
-Additionally, the optional `http_code` parameter is for the case when your `http_raw_data` does not include a first protocol line, such as `HTTP/1.1 200 OK`.  By passing in an `http_code` value the proper protocol line will be added to the beginning of the `http_raw_data` before parsing begins.  If you set `http_code` to `404` the line `HTTP/1.1 404 Object Not Found` would be inserted at the beginning of your `http_raw_data` value.  This can be useful when using parsnip to process _'multipart/mixed'_ segments where each segment is missing the protocol line at the start. 
+Additionally, the optional `http_code` parameter is for the case when your `http_raw_data` does not include a first protocol line, such as `HTTP/1.1 200 OK`.  
+
+By passing in an `http_code` value the proper protocol line will be added to the beginning of the `http_raw_data` before parsing begins.  If you set `http_code` to `404` the line `HTTP/1.1 404 Object Not Found` would be inserted at the beginning of your `http_raw_data` value.  
+
+This can be useful when using parsnip to process _'multipart/mixed'_ segments where each segment is missing the protocol line at the start.
+
+>***NOTE:***  `Parsnip.chop()` is a usable alias for `Parsnip.parse()`.  Why?  Because it amuses me.  `:-P` 
 
 ## Tests
 
